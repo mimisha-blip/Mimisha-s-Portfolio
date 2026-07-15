@@ -8,6 +8,9 @@
       name="description"
       content="Portfolio of Aayushi, an AI Product Manager focused on shipping AI products from problem to launch."
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -48,14 +51,17 @@
               <span></span><span></span><span></span>
             </div>
             <div class="terminal-body">
-              <p>aayushi — ~/portfolio online</p>
-              <p>aayushi ~ % ./intro</p>
-              <p>
-                I’m Aayushi — an AI Product Manager who takes AI products from
-                problem to launch.
-              </p>
-              <p>3.5 yrs · 0→1 products · voice + behavioral AI · evals &amp; guardrails.</p>
-              <p>type a command or tap a pill below.</p>
+              <p class="mono">aayushi — ~/portfolio online</p>
+              <p class="mono">aayushi ~ % <span id="cmd">./intro</span></p>
+              <p class="terminal-line" data-text="I’m Aayushi — an AI Product Manager who takes AI products from problem to launch."></p>
+              <p class="terminal-line" data-text="3.5 yrs · 0→1 products · voice + behavioral AI · evals &amp; guardrails."></p>
+              <p class="terminal-line" data-text="type a command or tap a pill below."></p>
+            </div>
+            <div class="terminal-pills" aria-hidden="false">
+              <button class="pill">whoami</button>
+              <button class="pill">work</button>
+              <button class="pill">case</button>
+              <button class="pill">contact</button>
             </div>
           </div>
         </section>
@@ -190,5 +196,31 @@
         <p>© 2026 Aayushi — available for AI PM roles · Sunnyvale, CA / remote</p>
       </footer>
     </div>
+    <script>
+      // Simple terminal typing reveal for the three lines
+      document.addEventListener('DOMContentLoaded', function () {
+        const lines = Array.from(document.querySelectorAll('.terminal-line'));
+        lines.forEach((el) => el.textContent = '');
+        lines.forEach((el, i) => {
+          const text = el.getAttribute('data-text');
+          setTimeout(() => {
+            let pos = 0;
+            const id = setInterval(() => {
+              el.textContent += text[pos++] || '';
+              if (pos > text.length) clearInterval(id);
+            }, 12);
+          }, 350 + i * 500);
+        });
+
+        // pills scroll to sections
+        document.querySelectorAll('.pill').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const map = { whoami: 'about', work: 'work', case: 'experience', contact: 'contact' };
+            const target = map[btn.textContent];
+            if (target) document.getElementById(target).scrollIntoView({ behavior: 'smooth' });
+          });
+        });
+      });
+    </script>
   </body>
 </html>

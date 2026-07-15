@@ -200,8 +200,44 @@ img {
 
 .terminal-body {
   padding: 20px;
-  font-family: "SFMono-Regular", Consolas, monospace;
+  font-family: 'JetBrains Mono', "SFMono-Regular", Consolas, monospace;
   color: #d8e0e8;
+}
+
+.mono {
+  font-family: 'JetBrains Mono', monospace;
+  color: #cfe9e1;
+  font-weight: 600;
+}
+
+.terminal-line {
+  min-height: 20px;
+  color: #d3dbe1;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.terminal-pills {
+  display: flex;
+  gap: 10px;
+  padding: 14px 18px 20px;
+  border-top: 1px solid rgba(255,255,255,0.02);
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+}
+
+.pill {
+  background: transparent;
+  color: var(--accent-2);
+  border: 1px solid rgba(127, 218, 193, 0.18);
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.pill:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(127,218,193,0.06);
 }
 
 .terminal-body p {
