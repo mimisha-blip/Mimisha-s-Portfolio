@@ -1,19 +1,16 @@
 import React from 'react'
-
-const posts = [
-  { title: 'How Product Managers Should Evaluate RAG Products', meta: 'Reading time: 6m' },
-  { title: 'Building an AI Product Copilot with LangGraph', meta: 'Reading time: 8m' }
-]
+import { writing } from '../data/portfolio'
 
 export default function Writing(){
   return (
     <div>
       <h1 className="text-3xl font-bold">Writing</h1>
+      <p className="muted mt-2">Coming soon.</p>
       <div className="mt-6 grid gap-4">
-        {posts.map(p=> (
-          <article key={p.title} className="card">
-            <h3 className="font-semibold">{p.title}</h3>
-            <div className="muted text-sm mt-1">{p.meta}</div>
+        {writing.map((title) => (
+          <article key={title} className="card">
+            <h3 className="font-semibold">{title}</h3>
+            <div className="muted text-sm mt-1">Coming soon</div>
           </article>
         ))}
       </div>

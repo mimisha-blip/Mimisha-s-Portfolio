@@ -2,47 +2,55 @@ import React from 'react'
 import FeaturedWork from '../sections/FeaturedWork'
 import Capabilities from '../sections/Capabilities'
 import ExperiencePreview from '../sections/ExperiencePreview'
+import ContactSection from './ContactSection'
+import { profile } from '../data/portfolio'
+import { ArrowRight, MapPin } from 'lucide-react'
 
 export default function Home(){
   return (
-    <div className="space-y-12">
-      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-        <div>
-          <p className="text-sm uppercase text-slate-500">AI PRODUCT MANAGER · ENTERPRISE SAAS · PRODUCT STRATEGY</p>
-          <h1 className="text-4xl md:text-5xl font-extrabold mt-4">I build AI products that turn complex enterprise data into clear decisions.</h1>
-          <p className="mt-4 text-slate-600">Product Manager with a software engineering background, building AI copilots, enterprise SaaS experiences, analytics products, and 0→1 prototypes.</p>
-          <div className="flex gap-4 mt-6">
-            <a href="/work" className="px-4 py-2 rounded-full bg-accent text-white">View My Work</a>
-            <a href="/resume" className="px-4 py-2 rounded-full border">Download Resume</a>
-            <a href="#" className="px-4 py-2 rounded-full border">Connect on LinkedIn</a>
+    <div>
+      <section className="hero-section">
+        <div className="hero-copy">
+          <div className="availability-line"><span /> AI Product Manager</div>
+          <h1>Building AI products that help enterprises <em>make smarter decisions.</em></h1>
+          <p className="hero-lead">{profile.heroSubtitle}</p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a href="#featured-work" className="button-primary">{profile.ctas[0]} <ArrowRight size={16} /></a>
+            <a href="./Mimisha-Mittal-Resume.pdf" className="button-secondary" download>{profile.ctas[1]}</a>
+            <a href="#contact" className="text-link">{profile.ctas[2]}</a>
           </div>
-          <div className="grid grid-cols-2 gap-4 mt-8">
-            <div className="card">
-              <h3 className="font-semibold">90% reduction</h3>
-              <p className="muted text-sm">in outage-related support cases</p>
+        </div>
+        <div className="hero-person" aria-label="About Mimisha">
+          <div className="hero-photo">
+            <img src="./mimisha-mittal.png" alt="Mimisha Mittal" />
+            <div className="hero-photo-label">
+              <strong>{profile.name}</strong>
+              <span><MapPin size={12} /> {profile.location}</span>
             </div>
-            <div className="card">
-              <h3 className="font-semibold">20% conversion</h3>
-              <p className="muted text-sm">SD-WAN to SASE migration</p>
-            </div>
-            <div className="card">
-              <h3 className="font-semibold">15% reduction</h3>
-              <p className="muted text-sm">in P0 incidents</p>
-            </div>
-            <div className="card">
-              <h3 className="font-semibold">Enterprise scope</h3>
-              <p className="muted text-sm">AI and SaaS products across enterprise networking</p>
+          </div>
+          <div className="current-role">
+            <span className="status-dot" />
+            <div>
+              <small>Currently</small>
+              <p>Product Manager 3 at HPE Aruba Networking</p>
             </div>
           </div>
         </div>
-        <div className="flex justify-center">
-          <div className="w-64 h-64 bg-gradient-to-br from-purple-100 to-white rounded-3xl shadow-lg flex items-center justify-center">Portrait</div>
-        </div>
+      </section>
+
+      <section className="metric-strip" aria-label="Career highlights">
+        {profile.metrics.map((metric) => (
+          <div key={metric.label}>
+            <strong>{metric.value}</strong>
+            <span>{metric.label}</span>
+          </div>
+        ))}
       </section>
 
       <FeaturedWork />
       <Capabilities />
       <ExperiencePreview />
+      <ContactSection />
     </div>
   )
 }

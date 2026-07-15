@@ -1,21 +1,49 @@
 import React from 'react'
+import { about } from '../data/portfolio'
 
 export default function About(){
   return (
-    <div className="space-y-6">
-      <h1 className="text-3xl font-bold">About</h1>
-      <p className="muted">I’m an AI and enterprise SaaS Product Manager with a background in software engineering and business analytics. I enjoy turning complex technical systems into products that help people make faster, clearer decisions.</p>
-
-      <section className="grid md:grid-cols-2 gap-6">
-        <div className="card">
-          <h3 className="font-semibold">My journey</h3>
-          <p className="muted mt-2">From software engineering to product leadership, focused on AI copilots and enterprise platforms.</p>
+    <article className="about-page">
+      <header className="about-hero">
+        <div>
+          <p className="eyebrow">About me</p>
+          <h1>I'm the PM who turns complex systems into products customers can trust.</h1>
+          <p>{about.intro}</p>
         </div>
-        <div className="card">
-          <h3 className="font-semibold">Beyond work</h3>
-          <p className="muted mt-2">Hackathons, mentoring, running, hot yoga, and technology for social impact.</p>
+        <figure>
+          <img src="./mimisha-mittal.png" alt="Mimisha Mittal" />
+          <figcaption>Mimisha Mittal · Sunnyvale, California</figcaption>
+        </figure>
+      </header>
+
+      <section className="about-story">
+        <div className="about-section-label"><span>01</span><p>My journey</p></div>
+        <div className="about-story-copy">
+          {about.story.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
         </div>
       </section>
-    </div>
+
+      <section className="about-principles">
+        <div className="about-section-label"><span>02</span><p>How I work</p></div>
+        <div className="about-principle-list">
+          {about.principles.map((principle, index) => (
+            <div key={principle.title}>
+              <span>0{index + 1}</span>
+              <h2>{principle.title}</h2>
+              <p>{principle.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="about-beyond">
+        <div className="about-section-label"><span>03</span><p>Beyond the roadmap</p></div>
+        <div>
+          <h2>I care about building useful technology and stronger communities.</h2>
+          <p>{about.community}</p>
+          <ul>{about.interests.map((interest) => <li key={interest}>{interest}</li>)}</ul>
+        </div>
+      </section>
+    </article>
   )
 }

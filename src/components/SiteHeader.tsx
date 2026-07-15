@@ -3,17 +3,17 @@ import { Link, NavLink } from 'react-router-dom'
 
 export default function SiteHeader() {
   return (
-    <header className="bg-white border-b">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link to="/" className="font-semibold text-lg text-slate-900">
-          Mimisha Mittal
+    <header className="site-header">
+      <div className="max-w-6xl mx-auto px-6 py-5 flex items-center justify-between gap-6">
+        <Link to="/" className="site-brand">
+          Mimisha <span>Mittal</span>
         </Link>
-        <nav className="flex gap-4 items-center">
-          <NavLink to="/work" className={({isActive})=> isActive? 'text-accent font-medium':'text-slate-600'}>Work</NavLink>
-          <NavLink to="/case-studies" className={({isActive})=> isActive? 'text-accent font-medium':'text-slate-600'}>Case Studies</NavLink>
-          <NavLink to="/about" className={({isActive})=> isActive? 'text-accent font-medium':'text-slate-600'}>About</NavLink>
-          <NavLink to="/writing" className={({isActive})=> isActive? 'text-accent font-medium':'text-slate-600'}>Writing</NavLink>
-          <NavLink to="/resume" className={({isActive})=> isActive? 'text-accent font-medium':'text-slate-600'}>Resume</NavLink>
+        <nav className="site-nav" aria-label="Primary navigation">
+          <NavLink to="/work">Work</NavLink>
+          <NavLink to="/case-studies">Case studies</NavLink>
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/writing">Writing</NavLink>
+          <NavLink to="/resume" className="nav-resume">Resume</NavLink>
         </nav>
       </div>
     </header>
