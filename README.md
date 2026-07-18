@@ -1,30 +1,18 @@
-# Mimisha Mittal — Portfolio
+# Mimisha Mittal - Portfolio
 
-This repository contains a Vite + React + TypeScript portfolio for Mimisha Mittal (AI & Enterprise SaaS Product Manager).
+AI and Enterprise SaaS Product Manager portfolio built with React, TypeScript, Vite, and Tailwind CSS.
 
-Local development
-
-1. Install dependencies:
+## Local development
 
 ```bash
 npm install
-```
-
-2. Run dev server:
-
-```bash
 npm run dev
 ```
 
-Build for GitHub Pages
+## Production build
 
 ```bash
 npm run build
 ```
 
-This writes the production site into the `docs/` folder so GitHub Pages can serve it from the `main` branch -> `docs` folder. After building, commit `docs/` and push to GitHub.
-
-Deploy notes
-
-- Option A: GitHub Pages (use `main` branch and set Pages source to `docs/`)
-- Option B: Run `gh-pages` package or GitHub Actions to publish to `gh-pages` branch.
+Pushes to `main` deploy automatically to GitHub Pages through the workflow in `.github/workflows/deploy-pages.yml`.
