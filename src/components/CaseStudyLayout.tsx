@@ -15,9 +15,11 @@ type CaseStudyLayoutProps = {
   overview: string
   sections: Array<{ title: string; body: string }>
   media?: CaseStudyMedia
+  cover?: { src: string; alt: string; caption: string }
+  repository?: string
 }
 
-export default function CaseStudyLayout({ title, eyebrow, overview, sections, media }: CaseStudyLayoutProps) {
+export default function CaseStudyLayout({ title, eyebrow, overview, sections, media, cover, repository }: CaseStudyLayoutProps) {
   return (
     <article className="case-study">
       <header className="case-header">
@@ -30,7 +32,22 @@ export default function CaseStudyLayout({ title, eyebrow, overview, sections, me
             <a href={media.github} target="_blank" rel="noreferrer" className="button-secondary inline-flex items-center gap-2"><Github size={15} /> Source code</a>
           </div>
         )}
+        {repository && (
+          <div className="case-actions">
+            <a href={repository} target="_blank" rel="noreferrer" className="button-primary"><Github size={15} /> View repository</a>
+          </div>
+        )}
       </header>
+
+      {cover && (
+        <div className="case-cover">
+          <figure className="case-hero-figure">
+            <div className="case-browser-bar"><span /><span /><span /><p>AI Product Intelligence Copilot</p></div>
+            <img src={cover.src} alt={cover.alt} className="case-hero-image" />
+            <figcaption>{cover.caption}</figcaption>
+          </figure>
+        </div>
+      )}
 
       {media && (
         <div className="case-media">

@@ -1,13 +1,13 @@
 export const profile = {
   name: 'Mimisha Mittal',
-  title: 'AI Product Manager | Enterprise SaaS | Product Strategy | AI Copilots',
+  title: 'AI & Enterprise SaaS Product Manager | Product Strategy | Analytics',
   location: 'Sunnyvale, California',
-  heroHeadline: 'Building AI products that help enterprises make smarter decisions.',
+  heroHeadline: 'Building AI and enterprise products that turn complexity into clear decisions.',
   heroSubtitle:
-    'I’m an AI & Enterprise SaaS Product Manager with a software engineering background. I build AI copilots, enterprise analytics platforms, and customer-centric SaaS experiences that transform complex technical systems into products people love using.',
+    'I’m a Product Manager with 4+ years of experience across enterprise SaaS, AI, analytics, and networking. I lead products from customer discovery and strategy through requirements, launch, and adoption—bringing an engineering foundation and an MBA in Business Analytics to every decision.',
   ctas: ['View My Work', 'Download Resume', 'Connect with Me'],
   metrics: [
-    { value: '90%', label: 'Reduction in outage-related support cases' },
+    { value: '500+', label: 'Enterprise customers covered by AI governance work' },
     { value: '20%', label: 'Increase in SD-WAN to SASE conversion' },
     { value: '15%', label: 'Reduction in P0 issues through Early Access programs' },
     { value: '4+', label: 'Years building enterprise SaaS and AI products' }
@@ -17,7 +17,7 @@ export const profile = {
 export const about = {
   intro: "I'm an AI and Enterprise SaaS Product Manager with 4+ years of experience turning complex systems, customer signals, and business goals into products that deliver measurable outcomes.",
   story: [
-    'Today I am a Product Manager 3 at HPE Aruba Networking, leading work across enterprise AI, analytics, SASE, pricing, governance, and customer experience. My products and programs have helped reduce outage-related support cases by 90%, convert 20% of an SD-WAN customer base to SASE, and reduce critical launch issues by 15%.',
+    'Today I am a Product Manager 3 at HPE Aruba Networking, leading work across enterprise AI, analytics, SASE, pricing, governance, and customer experience. I connect product telemetry, customer feedback, and commercial insights to shape product direction, adoption strategy, and roadmap decisions.',
     'My edge is that I think in systems and tradeoffs, not isolated features. I started as a software engineer working on Cisco enterprise products, so I can reason through dependencies, telemetry, failure modes, and implementation constraints with engineering, then connect those decisions to customer value, adoption, and business strategy.',
     'I prototype to learn, not only to present. I have designed AI copilots that unify customer feedback and operational data, built functional concepts for conversational enterprise experiences, and created RAG and agentic AI workflows through side projects and hackathons. An MBA in Business Analytics helps me pair that technical depth with evidence-based product strategy.'
   ],
@@ -37,19 +37,6 @@ export const about = {
 }
 
 export const featuredProjects = [
-  {
-    slug: 'ai-product-insights-copilot',
-    title: 'AI Product Insights Copilot',
-    category: 'Enterprise AI',
-    description:
-      'An AI Product Copilot that combines customer feedback, support cases, product analytics, and competitor research into one conversational interface for roadmap decisions.',
-    tags: ['Enterprise AI', 'Generative AI', 'RAG', 'LangGraph'],
-    techStack: ['LangGraph', 'RAG', 'Pinecone', 'Qwen', 'Fireworks AI', 'Python'],
-    role: ['Product Strategy', 'AI Workflow Design', 'Product Requirements', 'UX', 'Evaluation Framework', 'Architecture Design'],
-    features: ['Multi-source retrieval', 'Product analytics', 'Roadmap recommendations', 'Competitor analysis', 'Executive summaries', 'Citation-based responses'],
-    outcome: 'Demonstrated how AI can dramatically reduce research time for product teams while improving confidence in roadmap decisions.',
-    links: { caseStudy: '/case-studies/ai-product-insights-copilot', github: '#', demo: '#' }
-  },
   {
     slug: 'ai-canvas',
     title: 'AI Canvas',
@@ -81,17 +68,21 @@ export const featuredProjects = [
     }
   },
   {
-    slug: 'enterprise-product-analytics',
-    title: 'Enterprise Product Analytics Initiative',
-    category: 'Enterprise SaaS',
+    slug: 'ai-product-intelligence-copilot',
+    title: 'AI Product Intelligence Copilot',
+    category: 'Enterprise Product Analytics',
     description:
-      'A cross-product analytics framework that standardized adoption, customer behavior, and revenue measurement across multiple enterprise products.',
-    tags: ['Enterprise SaaS', 'Product Analytics'],
-    techStack: ['Product Analytics', 'Enterprise SaaS', 'Strategy', 'Stakeholder Management'],
-    role: ['Stakeholder Management', 'Product Analytics', 'Strategic Planning', 'Cross-functional Leadership', 'Requirements Gathering'],
-    features: ['Adoption Metrics', 'Customer Insights', 'Product Usage', 'Revenue Metrics', 'Business KPIs', 'Product Telemetry', 'Executive Dashboards'],
-    outcome: 'Helped leadership understand adoption and business performance across product lines with a more consistent measurement model.',
-    links: { caseStudy: '/case-studies/enterprise-product-analytics' }
+      'A RAG and LangGraph copilot that turns customer feedback, support cases, Jira, usage analytics, and competitor signals into evidence-backed roadmap recommendations.',
+    tags: ['Product Analytics', 'RAG', 'LangGraph', 'Evidence-backed AI'],
+    techStack: ['Python', 'LangGraph', 'Pinecone', 'Fireworks AI', 'Qwen', 'Sentence Transformers', 'Streamlit'],
+    role: ['Product Strategy', 'AI Workflow Design', 'Architecture', 'Prioritization Logic', 'Prototype Development'],
+    features: ['Pain Point Analysis', 'Feature Prioritization', 'Competitor Analysis', 'Roadmap Generation', 'Retrieved Evidence', 'Product-area Scoring'],
+    outcome: 'Built a working product-strategy workflow that ranks product areas and explains recommendations using retrieved evidence rather than unsupported AI output.',
+    cover: './product-intelligence/copilot-interface.png',
+    links: {
+      caseStudy: '/case-studies/ai-product-intelligence-copilot',
+      github: 'https://github.com/mimisha-blip/Product-intelligence-copilot'
+    }
   }
 ]
 
@@ -110,7 +101,7 @@ export const otherProjects = [
   },
   {
     name: 'Appliance Health Reporting',
-    description: 'Designed an automated reporting experience to identify appliances with expired licenses or missing check-ins before outages.',
+    description: 'Designed an automated reporting experience that turns appliance health, license status, and check-in telemetry into proactive customer insights.',
     category: 'Strategy and Analytics',
     tags: ['Analytics', 'Automation', 'Customer Outcomes']
   },
@@ -130,20 +121,32 @@ export const otherProjects = [
 
 export const capabilities = [
   {
-    title: 'AI Product Management',
-    items: ['RAG', 'Agentic AI', 'LangGraph', 'Prompt Engineering', 'AI Evaluation', 'LLM Applications', 'AI Product Strategy']
+    title: 'Customer-first product thinking',
+    description: 'I turn ambiguous customer problems into clear product strategy, focused requirements, and prioritized roadmaps.'
   },
   {
-    title: 'Product Management',
-    items: ['Product Discovery', 'Product Strategy', 'Roadmapping', 'Prioritization', 'Customer Research', 'Stakeholder Management']
+    title: 'AI product expertise',
+    description: 'I build and prototype with LLMs, RAG, and agentic workflows so teams can validate value, quality, and risk before scaling development.'
   },
   {
-    title: 'Enterprise SaaS',
-    items: ['Product Analytics', 'Platform Products', 'Cloud Products', 'Enterprise Networking', 'Customer Insights']
+    title: 'Technical depth',
+    description: 'My software engineering background helps me partner deeply on architecture, dependencies, feasibility, and technical tradeoffs.'
   },
   {
-    title: 'Technical',
-    items: ['Python', 'SQL', 'GitHub', 'Pinecone', 'Neo4j', 'REST APIs', 'LLMs', 'Fireworks AI']
+    title: 'Data-driven decisions',
+    description: 'I connect product analytics, customer feedback, telemetry, and experiments to guide priorities and define meaningful success measures.'
+  },
+  {
+    title: 'Cross-functional leadership',
+    description: 'I align Engineering, Design, Legal, Marketing, Sales, Support, and customers around product direction and execution.'
+  },
+  {
+    title: 'Bias for action',
+    description: 'I thrive in ambiguity, move quickly from insight to prototype, and focus teams on customer and business outcomes.'
+  },
+  {
+    title: 'Ownership mindset',
+    description: 'I take products from discovery through launch and adoption, balancing customer needs, business goals, and technical feasibility.'
   }
 ]
 
@@ -152,15 +155,35 @@ export const experience = [
     company: 'Hewlett Packard Enterprise',
     role: 'Product Manager 3 · HPE Aruba Networking',
     date: 'May 2022 – Present',
-    summary: 'Leading AI-powered enterprise networking initiatives across AI copilots, analytics, AI governance, pricing strategy, customer insights, and SaaS experiences.',
-    bullets: ['AI copilots and analytics', 'Product strategy and pricing', 'AI governance and legal collaboration', 'Cross-functional product leadership', 'Customer beta and early access programs']
+    summary: 'Leading enterprise product work across AI copilots, product intelligence, analytics, SASE adoption, governance, pricing, and customer experience.',
+    bullets: [
+      'Created product-intelligence workflows connecting customer feedback, support, feature adoption, and operational telemetry to roadmap decisions',
+      'Partnered with Legal and Engineering on AI governance and consent workflows supporting 500+ enterprise customers',
+      'Designed a SASE adoption program that converted 20% of an SD-WAN customer base within two quarters',
+      'Built an Early Adopters program that reduced critical issues by 15% across three releases',
+      'Led competitive pricing, product analytics reviews, and cross-functional product strategy'
+    ]
+  },
+  {
+    company: 'Genesys · City of Berkeley',
+    role: 'MBA Consulting Engagements',
+    date: 'Spring – Fall 2022',
+    summary: 'Applied business analytics and product strategy to customer growth and public-sector healthcare challenges.',
+    bullets: [
+      'Segmented Genesys Cloud CX customers by contract-value behavior to identify adoption and growth signals',
+      'Used qualitative and quantitative analysis to identify investors supporting lower-cost emergency healthcare for the City of Berkeley'
+    ]
   },
   {
     company: 'Wipro',
     role: 'Software Engineer',
     date: '2019 – 2021',
     summary: 'Worked on Cisco enterprise networking products, handling customer issues, code reviews, and delivery across multiple client projects.',
-    bullets: ['Cisco networking products', 'Customer issue resolution', 'Code reviews and delivery tracking', 'Software engineering foundation']
+    bullets: [
+      'Enhanced Cisco enterprise networking products across four client projects',
+      'Handled customer issues, technical troubleshooting, code reviews, and delivery tracking',
+      'Built the systems-thinking foundation I now bring to product architecture and technical tradeoffs'
+    ]
   }
 ]
 
@@ -177,39 +200,45 @@ export const writing = [
   'Building AI for Social Good'
 ]
 
+export const productThinking = [
+  {
+    title: 'Start with the customer problem',
+    description: 'I separate the visible request from the underlying job, friction, and decision the customer is trying to make.'
+  },
+  {
+    title: 'Understand the system',
+    description: 'I map users, workflows, data, dependencies, incentives, and constraints before deciding where a product intervention belongs.'
+  },
+  {
+    title: 'Choose the tradeoff deliberately',
+    description: 'I make scope, speed, quality, cost, risk, and technical feasibility explicit so the team understands why a direction was chosen.'
+  },
+  {
+    title: 'Use evidence to prioritize',
+    description: 'Customer feedback, product analytics, telemetry, market context, and business goals work together to shape the roadmap.'
+  },
+  {
+    title: 'Prototype before scaling',
+    description: 'I use focused prototypes to test value, workflow, AI behavior, and usability before committing broader engineering investment.'
+  },
+  {
+    title: 'Define success and learn',
+    description: 'I connect each product bet to measurable customer and business outcomes, then use what we learn to improve the next decision.'
+  }
+]
+
 export const contact = {
   headline: 'Let’s build products that make complex technology feel simple.',
   description: 'I’m always interested in connecting with people working in AI Product Management, Enterprise SaaS, AI startups, and technology for social impact.',
   location: 'Sunnyvale, California',
   links: [
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/mimisha-mittal' },
-    { label: 'GitHub', href: 'https://github.com/mimisha-blip' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/mimisha-mittal/' },
     { label: 'Resume', href: './Mimisha-Mittal-Resume.pdf' },
-    { label: 'Email', href: 'mailto:mimishamittal@gmail.com' }
+    { label: 'mimishamittal@gmail.com', href: 'mailto:mimishamittal@gmail.com' }
   ]
 }
 
 export const caseStudies = [
-  {
-    slug: 'ai-product-insights-copilot',
-    title: 'AI Product Insights Copilot',
-    eyebrow: 'Enterprise AI · Product Strategy · RAG',
-    overview: 'A conversational AI product copilot for enterprise product teams that turns fragmented data into grounded roadmap recommendations.',
-    problem: 'Product teams were spending hours gathering information from support, analytics, Jira, and competitor research, which slowed prioritization and made evidence harder to trust.',
-    users: 'Product managers, directors, and executives in enterprise product organizations.',
-    whyItMatters: 'Roadmap decisions depend on connecting customer pain points with product usage and market signals; disconnected systems make that work slow and inconsistent.',
-    role: 'Product strategy, workflow design, UX, architecture, evaluation framework.',
-    research: 'Interviewed PMs and partnered with support, analytics, and engineering to map the information needs behind roadmap decisions.',
-    productDecisions: 'Built a retrieval-first experience with evidence-backed responses, role-specific summaries, and human-in-the-loop review for recommendations.',
-    tradeoffs: 'Prioritized grounded answers over broad automation, and limited scope to high-confidence evidence retrieval early on.',
-    solution: 'A multi-source retrieval experience that answers natural-language questions and surfaces citations for product and roadmap decisions.',
-    architecture: 'LangGraph orchestrated retrieval across product data sources, with Pinecone and Qwen/Fireworks AI powering retrieval and generation steps.',
-    evaluation: 'Used citation checks, task accuracy, and PM review feedback to refine the experience and reduce hallucinated recommendations.',
-    metrics: ['Reduced research time for roadmap planning', 'Improved confidence in recommendation quality', 'Created a repeatable AI workflow for PM teams'],
-    outcome: 'Demonstrated a practical AI workflow that helps enterprise product teams make faster, better-informed decisions.',
-    learned: 'The value of AI products is highest when the experience is grounded in trusted data and designed around a real decision workflow.',
-    nextSteps: 'Expand to more source systems and stronger executive summaries for broader rollout.'
-  },
   {
     slug: 'ai-canvas',
     title: 'AI Canvas',
@@ -287,23 +316,29 @@ export const caseStudies = [
     ]
   },
   {
-    slug: 'enterprise-product-analytics',
-    title: 'Enterprise Product Analytics Initiative',
-    eyebrow: 'Enterprise SaaS · Product Analytics · Strategy',
-    overview: 'A standardized measurement strategy that helps product teams and leaders understand adoption, behavior, and business performance across product lines.',
-    problem: 'Different product teams measured success differently, making cross-product adoption and business performance difficult for leadership to understand.',
-    users: 'Enterprise product managers, product leaders, and executive stakeholders.',
-    whyItMatters: 'Shared definitions and consistent telemetry are essential for comparing performance and making sound portfolio decisions.',
-    role: 'Stakeholder management, product analytics, strategic planning, cross-functional leadership, and requirements gathering.',
-    research: 'Interviewed product managers across multiple enterprise products to identify their most important business and product questions.',
-    productDecisions: 'Organized the framework around adoption, customer insight, usage, revenue, business KPIs, telemetry, and executive reporting.',
-    tradeoffs: 'Balanced product-specific measurement needs with a core set of metrics that could remain consistent across the portfolio.',
-    solution: 'A cross-product analytics framework and standardized measurement strategy for enterprise product teams.',
-    architecture: 'The initiative defined common metric requirements, product telemetry inputs, and executive dashboard outputs across product lines.',
-    evaluation: 'Reviewed metric definitions and reporting needs with product stakeholders to establish usefulness and cross-product consistency.',
-    metrics: ['Shared adoption definitions', 'Consistent business KPI framework', 'Clearer executive reporting requirements'],
-    outcome: 'Established a more consistent foundation for understanding product adoption, customer behavior, and business performance.',
-    learned: 'Analytics programs succeed when teams align on the decisions a metric should inform before debating tools or dashboards.',
-    nextSteps: 'Operationalize the shared definitions through telemetry standards and portfolio-level dashboards.'
+    slug: 'ai-product-intelligence-copilot',
+    title: 'AI Product Intelligence Copilot',
+    eyebrow: 'Product Analytics · RAG · LangGraph · Enterprise AI',
+    overview: 'A product intelligence copilot that synthesizes fragmented B2B SaaS signals into grounded feature priorities, competitor insights, and roadmap recommendations.',
+    problem: 'Product managers spend significant time reconciling customer feedback, support cases, Jira tickets, usage data, and competitor research before they can make or defend a roadmap decision.',
+    users: 'Product managers and product leaders who need faster, evidence-backed prioritization and roadmap decisions.',
+    whyItMatters: 'When signals live across disconnected tools, recurring pain points are easy to miss and product bets become harder to explain to engineering and leadership.',
+    role: 'Product strategy, workflow design, architecture, prioritization logic, prototype development, and recommendation design.',
+    research: 'Modeled realistic SignalDesk B2B SaaS datasets across five sources and centered the workflow on questions PMs repeatedly ask about pain points, priorities, competitors, and quarterly roadmaps.',
+    productDecisions: 'Used retrieval before generation, displayed supporting sources in the UI, and calculated product-area priority scores before asking the LLM to explain a recommendation.',
+    tradeoffs: 'The prototype uses realistic mock data to demonstrate the complete workflow safely. It prioritizes grounded recommendations and transparent evidence over broad autonomous decision making.',
+    solution: 'A Streamlit copilot that answers product-strategy questions, ranks priorities, generates roadmap recommendations, and shows the retrieved evidence behind each response.',
+    architecture: 'CSV product signals are converted into documents, embedded with Sentence Transformers, stored and retrieved through Pinecone, routed with LangGraph, and synthesized by Qwen through Fireworks AI.',
+    evaluation: 'The repository includes unit tests and a roadmap for formal retrieval-quality, grounding, and configurable scoring evaluations.',
+    metrics: ['Five product-signal sources', 'Evidence displayed with recommendations', 'Product-area scoring before LLM explanation'],
+    outcome: 'Built an end-to-end RAG application that demonstrates how PMs can move from fragmented signals to explainable roadmap decisions in one workflow.',
+    learned: 'AI recommendations are more useful when retrieval, scoring, and explanation are separate, inspectable steps rather than one opaque prompt.',
+    nextSteps: 'Connect real source systems, add authentication and saved workspaces, support configurable scoring weights, persist evidence snapshots, and expand evaluation coverage.',
+    cover: {
+      src: './product-intelligence/copilot-interface.png',
+      alt: 'Concept interface for the AI Product Intelligence Copilot showing feature priorities and retrieved evidence',
+      caption: 'Concept interface based on the implemented retrieval, scoring, and recommendation workflow.'
+    },
+    repository: 'https://github.com/mimisha-blip/Product-intelligence-copilot'
   }
 ]

@@ -26,7 +26,9 @@ export default function CaseStudyDetail() {
   ]
 
   const media = 'media' in study ? study.media : undefined
+  const cover = 'cover' in study ? study.cover : undefined
+  const repository = 'repository' in study ? study.repository : undefined
   const sections = 'customSections' in study ? study.customSections : defaultSections
 
-  return <CaseStudyLayout title={study.title} eyebrow={study.eyebrow} overview={study.overview} sections={sections} media={media} />
+  return <CaseStudyLayout title={study.title} eyebrow={study.eyebrow} overview={study.overview} sections={sections} media={media} cover={cover} repository={repository} />
 }

@@ -11,8 +11,8 @@ export default function Home(){
     <div>
       <section className="hero-section">
         <div className="hero-copy">
-          <div className="availability-line"><span /> AI Product Manager</div>
-          <h1>Building AI products that help enterprises <em>make smarter decisions.</em></h1>
+          <div className="availability-line"><span /> AI & Enterprise SaaS Product Manager</div>
+          <h1>Building products that turn complexity into <em>clear decisions.</em></h1>
           <p className="hero-lead">{profile.heroSubtitle}</p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#featured-work" className="button-primary">{profile.ctas[0]} <ArrowRight size={16} /></a>

@@ -1,23 +1,50 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { caseStudies } from '../data/portfolio'
+import { ArrowRight } from 'lucide-react'
+import { caseStudies, productThinking } from '../data/portfolio'
 
 export default function CaseStudies(){
   return (
-    <div>
-      <h1 className="text-3xl font-bold">Case Studies</h1>
-      <p className="muted mt-2">Selected work across enterprise AI, product strategy, analytics, and AI for social good.</p>
-      <div className="mt-6 grid gap-6">
-        {caseStudies.map((study) => (
-          <article key={study.slug} className="card">
-            <div className="text-sm uppercase tracking-[0.2em] text-slate-400">{study.eyebrow}</div>
-            <h3 className="font-semibold mt-2">{study.title}</h3>
-            <p className="muted mt-2">{study.overview}</p>
-            <p className="text-sm mt-4 text-slate-600">Outcome: {study.outcome}</p>
-            <Link to={`/case-studies/${study.slug}`} className="inline-block mt-4 text-accent font-medium">Read case study</Link>
-          </article>
+    <article className="studies-page">
+      <header className="studies-intro">
+        <p className="eyebrow">Case studies</p>
+        <h1>How I approach product problems.</h1>
+        <p>These case studies show more than the final solution. They explain how I frame the problem, connect customer and business evidence, make tradeoffs, and turn strategy into something a team can build.</p>
+      </header>
+
+      <section className="thinking-section">
+        <div className="thinking-heading">
+          <p className="eyebrow">How I think about product</p>
+          <h2>Clear thinking before feature building.</h2>
+        </div>
+        <div className="thinking-grid">
+          {productThinking.map((principle, index) => (
+            <div key={principle.title}>
+              <span>0{index + 1}</span>
+              <h3>{principle.title}</h3>
+              <p>{principle.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="study-list">
+        <div className="study-list-heading">
+          <p className="eyebrow">Built and shaped</p>
+          <h2>Selected product work.</h2>
+        </div>
+        {caseStudies.map((study, index) => (
+          <Link to={`/case-studies/${study.slug}`} key={study.slug} className="study-row">
+            <span>0{index + 1}</span>
+            <div>
+              <small>{study.eyebrow}</small>
+              <h3>{study.title}</h3>
+              <p>{study.overview}</p>
+            </div>
+            <div className="study-row-link">Read case study <ArrowRight size={17} /></div>
+          </Link>
         ))}
-      </div>
-    </div>
+      </section>
+    </article>
   )
 }

@@ -5,7 +5,7 @@ import Work from './pages/Work'
 import CaseStudies from './pages/CaseStudies'
 import CaseStudyDetail from './pages/CaseStudyDetail'
 import About from './pages/About'
-import Writing from './pages/Writing'
+import Experience from './pages/Experience'
 import Resume from './pages/Resume'
 import NotFound from './pages/NotFound'
 import SiteHeader from './components/SiteHeader'
@@ -22,7 +22,7 @@ export default function App() {
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/case-studies/:slug" element={<CaseStudyDetail />} />
           <Route path="/about" element={<About />} />
-          <Route path="/writing" element={<Writing />} />
+          <Route path="/experience" element={<Experience />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -15,6 +15,7 @@ export default function FeaturedWork(){
           <article key={p.title} className="project-row">
             <div className={`project-visual project-visual-${index + 1}`}>
               {p.slug === 'pantry-buddy' && <img src="./pantrygraph/dashboard.png" alt="PantryGraph live pantry network graph and assistant" className="project-screenshot" />}
+              {'cover' in p && p.cover && <img src={p.cover} alt="AI Product Intelligence Copilot concept interface" className="project-screenshot" />}
               <span>0{index + 1}</span>
               <div>
                 <p>{p.category}</p>
@@ -42,6 +43,9 @@ export default function FeaturedWork(){
                   <a href={p.links.github} target="_blank" rel="noreferrer" className="project-link mt-0">GitHub <ArrowUpRight size={16} /></a>
                   <a href={p.links.devpost} target="_blank" rel="noreferrer" className="project-link mt-0">Devpost <ArrowUpRight size={16} /></a>
                 </div>
+              )}
+              {p.slug === 'ai-product-intelligence-copilot' && (
+                <a href={p.links.github} target="_blank" rel="noreferrer" className="project-link">GitHub <ArrowUpRight size={16} /></a>
               )}
             </div>
           </article>
